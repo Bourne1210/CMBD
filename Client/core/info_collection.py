@@ -16,12 +16,12 @@ class InfoCollection(object):
 
 	@staticmethod
 	def linux():
-		from Client.plugins.collect_linux_info import collect
+		from plugins.collect_linux_info import collect
 		return collect()
 
 	@staticmethod
 	def windows():
-		from Client.plugins.collect_windows_info import Win32Info
+		from plugins.collect_windows_info import Win32Info
 		return Win32Info().collect()
 
 	@staticmethod

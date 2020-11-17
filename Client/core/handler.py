@@ -4,8 +4,8 @@ import json
 import time
 import urllib.parse
 import urllib.request
-from Client.core import info_collection
-from Client.conf import settings
+from core import info_collection
+from conf import settings
 
 class ArgvHandler(object):
 
@@ -53,7 +53,7 @@ class ArgvHandler(object):
 		data = {"asset_data": json.dumps(asset_data)}
 		# 根据settings中的配置，构造url
 		url = "http://{}:{}{}".format(settings.Params["server"],settings.Params['port'],settings.Params['url'])
-		print('正在将数据发送至：[{}]'.format(url))
+		print('正在将数据发送至：[{}] ......'.format(url))
 		try:
 			#使用Python内置的urllib.request库，发送post请求。
 			#需要先将数据进行封装，并转换成bytes类型

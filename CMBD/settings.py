@@ -25,7 +25,7 @@ SECRET_KEY = '_jf@ho+*s%-cdjejq#60e@i9f4@xq2m*l@!*6gdlae*=(a$d0k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -118,6 +118,11 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = False
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
+
 
 
 # Static files (CSS, JavaScript, Images)
